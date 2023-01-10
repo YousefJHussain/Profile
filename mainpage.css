@@ -1,0 +1,248 @@
+/* before start  */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+a {
+    text-decoration: unset;
+    color: #000;
+}
+
+/*start*/
+body {
+    background-color: #555;
+}
+.container {
+    width: 70%;
+    display: block;
+    margin: 0 auto;
+    height: 500px;
+    margin-top: 50px;
+    background-color: #DDD;
+    padding-top: 30px;
+    box-shadow: 0 0 30px aqua;
+    box-sizing: border-box;
+}
+.container .parent_box {
+    height: 100%;
+    width: 100%;
+    background-color: orange;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    padding-top: 30px;
+    box-sizing: border-box;
+}
+.container .parent_box .children_box {
+    background-color: #EEE;
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    display: grid;
+    grid-template-columns: 300px minmax(300px, 1fr);
+    box-sizing: border-box;
+}
+.container .parent_box .children_box .first-col {
+    background-color: #AAA;
+    border-top-left-radius: 10px;
+    padding: 10px;
+    padding-top: 20px;
+}
+
+.container .parent_box .children_box .first-col .image_icon {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #999;
+}
+.container .parent_box .children_box .first-col .image_icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.container .parent_box .children_box .first-col .my_info {
+    margin-bottom: 30px;
+}
+.container .parent_box .children_box .first-col .my_info li {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: start;
+}
+.container .parent_box .children_box .first-col .my_info li span {
+    font-size: 16px;
+}
+.container .parent_box .children_box .first-col .my_info li span:first-of-type {
+    font-weight: 800;
+    display: inline-block;
+    width: 40%;
+}
+.container .parent_box .children_box .first-col .my_info li span:last-of-type {
+    width: 60%;
+    flex: 1 auto;
+    overflow-wrap: break-word;
+}
+.container .parent_box .children_box .first-col .communication_icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.container .parent_box .children_box .first-col .communication_icon li {
+    width: 40px;
+    height: 40px;
+    background-color: #FFF;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.container .parent_box .children_box .first-col .communication_icon li a {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+}
+.container .parent_box .children_box .first-col .communication_icon li img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.container .parent_box .children_box .second-col {
+    background-color: #FFF;
+    border-top-right-radius: 10px;
+    padding: 10px;
+}
+/****************************  start responsive   ************************/
+@media (max-width: 575.9px){
+    .container {
+        width: 100%;
+        box-shadow: unset;
+        height: auto;
+        margin: 0;
+        padding-top: 15px;
+    }
+    .container .parent_box {
+        padding-top: 15px;
+        border-radius: 30px 30px 0 0;
+    }
+    .container .parent_box .children_box {
+        grid-template-columns: 1fr;
+    }
+    .container .parent_box .children_box .first-col {
+        border-radius: 10px 10px 0 0;
+        padding: 20px 50px;
+    }
+    .container .parent_box .children_box .first-col .image_icon {
+        width: 50px;
+        height: 50px;
+    }
+    .container .parent_box .children_box .first-col ul {
+        width: auto;
+    }
+    .container .parent_box .children_box .first-col .my_info li span {
+        font-size: 12px;
+    }
+    .container .parent_box .children_box .first-col .communication_icon li {
+        height: 30px;
+        width: 30px;
+    }
+    .container .parent_box .children_box .second-col {
+        border-radius: unset;
+    }
+    .container .parent_box .children_box .second-col h3{
+        font-size: 14px;
+    }
+    .container .parent_box .children_box .second-col p {
+        font-size: 12px;
+    }
+    .container .parent_box .children_box .second-col ol li {
+        font-size: 12px;
+    }
+}
+@media (min-width:576px) and (max-width:767.9px) {
+    .container {
+        height: auto;
+        margin: 30px auto;
+        padding-top: 20px;
+    }
+    .container .parent_box {
+        padding-top: 20px;
+    }
+    .container .parent_box .children_box {
+        grid-template-columns: 1fr;
+    }
+    .container .parent_box .children_box .first-col {
+        border-radius: 20px 20px 0 0;
+    }
+    .container .parent_box .children_box .first-col .image_icon {
+        width: 60px;
+        height: 60px;
+    }
+    .container .parent_box .children_box .first-col ul {
+        width: 280px;
+        margin: auto;
+    }
+    .container .parent_box .children_box .first-col .my_info li span {
+        font-size: 13px;
+    }
+    .container .parent_box .children_box .second-col {
+        border-radius: unset;
+    }
+    .container .parent_box .children_box .second-col h3{
+        font-size: 15px;
+    }
+    .container .parent_box .children_box .second-col p {
+        font-size: 13px;
+    }
+    .container .parent_box .children_box .second-col ol li {
+        font-size: 13px;
+    }
+}
+@media (min-width:768px) and (max-width:991.9px) {
+    .container {
+        height: auto;
+        margin: 40px auto;
+    }
+    .container .parent_box .children_box {
+        grid-template-columns: 1fr;
+    }
+    .container .parent_box .children_box .first-col {
+        border-radius: 10px 10px 0 0;
+    }
+    .container .parent_box .children_box .first-col ul {
+        width: 300px;
+        margin: auto;
+    }
+    .container .parent_box .children_box .first-col .my_info li span {
+        font-size: 14px;
+    }
+    .container .parent_box .children_box .second-col {
+        border-radius: unset;
+    }
+    .container .parent_box .children_box .second-col h3{
+        font-size: 16px;
+    }
+    .container .parent_box .children_box .second-col p {
+        font-size: 14px;
+    }
+    .container .parent_box .children_box .second-col ol li {
+        font-size: 14px;
+    }
+}
+@media (min-width: 992px) and (max-width:1200px) {
+    .container .parent_box .children_box .first-col .my_info li span {
+        font-size: 15px;
+    }
+    .container .parent_box .children_box .second-col h3{
+        font-size: 17px;
+    }
+    .container .parent_box .children_box .second-col p {
+        font-size: 15px;
+    }
+    .container .parent_box .children_box .second-col ol li {
+        font-size: 15px;
+    }
+}
